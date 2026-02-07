@@ -15,10 +15,4 @@ public class Student {
     public static void sayHello() {
         System.out.println("Hello from student class");
     }
-
-    public int doSomething() {
-        sayHello();
-        count += 5;
-        return count;
-    }
 }
