@@ -15,7 +15,5 @@ public class Client {
         System.out.println(Student.count);
         Student.sayHello();
         System.out.println("DEBUG");
-
-        System.out.println(s1.doSomething());
     }
 }
