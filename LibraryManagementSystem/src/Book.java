@@ -4,6 +4,8 @@ abstract class Book implements Lendable {
     private String author;
     private boolean isAvailable;
 
+    private static final int age = 10;
+
     // Default constructor
     public Book() {
         this.isAvailable = true;
