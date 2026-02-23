@@ -11,6 +11,6 @@ public class Client2 {
 
         Calculator<String> c3 = new Calculator<>();
 
-        System.out.println(c3.add("3","4"));
+        //System.out.println(c3.add("3","4"));
     }
 }

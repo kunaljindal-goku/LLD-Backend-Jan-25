@@ -22,7 +22,4 @@ public class UserUtility<T> {
 //    public <T extends ScalerUser>void printNames(List<T> users) {
 //
 //    }
-
-    Collection;
-    Map
 }
