@@ -1,9 +1,11 @@
 import db.Database;
 import db.MongoDb;
 import db.MySql;
+import factory.DatabaseFactory;
 import query.NoSqlQuery;
 import query.Query;
 import query.SqlQuery;
+import transactions.Transaction;
 
 import javax.xml.crypto.Data;
 
@@ -16,13 +18,14 @@ public class UserService {
     }
 
     public void createUser() {
-        Query q = null;
-        if(db instanceof MySql) {
-            q = new SqlQuery();
-        }
-        else if(db instanceof MongoDb) {
-            q = new NoSqlQuery();
-        }
+        DatabaseFactory dbFactory = db.createDatabasefactory();
+        Query q = dbFactory.getQuery();
         q.execute();
+    }
+
+    public void executeUserTransaction() {
+        DatabaseFactory dbFactory = db.createDatabasefactory();
+        Transaction t = dbFactory.createTransaction();
+        t.commit();
     }
 }
