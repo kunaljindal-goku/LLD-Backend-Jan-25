@@ -2,12 +2,12 @@ public class PhonePe {
 
     private BankAPI bankAPI;
 
-    public PhonePe() {
-        bankAPI = new IciciAPI();
+    public PhonePe(BankAPI bankAPI) {
+        this.bankAPI = bankAPI;
     }
 
     public void doTransanction(BankAccount account, int amount) {
-        int balance = bankAPI.getBalance(account);
+        int balance = bankAPI.fetchBalance(account);
         if(balance < amount) {
             throw new RuntimeException("Insufficent balance");
         }
