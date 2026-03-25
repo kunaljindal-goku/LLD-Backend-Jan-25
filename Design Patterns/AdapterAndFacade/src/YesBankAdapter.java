@@ -7,7 +7,7 @@ public class YesBankAdapter implements BankAPI{
     }
 
     @Override
-    public int fetchBalance(BankAccount account, int random) {
+    public int fetchBalance(BankAccount account) {
         return yesBankAPI.seeBalance(account);
     }
 
