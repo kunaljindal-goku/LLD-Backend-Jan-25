@@ -13,5 +13,9 @@ public class Client {
         PhonePe phonePe = new PhonePe(bankAPI);
 
         phonePe.doTransanction(bankAccount,500);
+
+        //check
+
+        // trans
     }
 }
