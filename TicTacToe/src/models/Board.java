@@ -7,7 +7,7 @@ import java.util.SimpleTimeZone;
 public class Board {
 
     private int size;
-    private List<List<Cell>> cells;
+    private List<List<Cell>> cells; // cells[][]
 
     public Board(int size) {
         this.size = size;
@@ -16,6 +16,14 @@ public class Board {
             this.cells.add(new ArrayList<>());
             for(int j=0;j<size;j++) {
                 this.cells.get(i).add(new Cell(i,j));
+            }
+        }
+    }
+
+    public void display() {
+        for(int i=0;i<size;i++) {
+            for(int j=0;j<size;j++) {
+                this.cells.get(i).get(j).display();
             }
         }
     }

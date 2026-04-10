@@ -7,5 +7,16 @@ public class GameClient {
 
         GameController gameController = new GameController();
         Game game = gameController.startGame();
+
+        // display board
+        gameController.display(game);
+
+        while(IN_PROGRESS) {
+            // move
+            // display board
+            // checkwinner
+            // if winner -> true
+            // set -> FINISHED
+        }
     }
 }
