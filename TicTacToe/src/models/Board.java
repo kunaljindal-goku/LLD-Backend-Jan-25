@@ -25,6 +25,7 @@ public class Board {
             for(int j=0;j<size;j++) {
                 this.cells.get(i).get(j).display();
             }
+            System.out.println();
         }
     }
 

@@ -17,10 +17,10 @@ public class Cell {
 
     public void display() {
         if(this.cellState==CellState.EMPTY) {
-            System.out.println("| |");
+            System.out.print("|-|");
         }
         else {
-            System.out.println("| "+player.getSymbol().getSymbolName()+ " |");
+            System.out.print("| "+player.getSymbol().getSymbolName()+ " |");
         }
     }
 

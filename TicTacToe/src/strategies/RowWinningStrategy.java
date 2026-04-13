@@ -1,7 +1,6 @@
-package stratigies;
+package strategies;
 
 import models.Move;
-import models.Symbol;
 
 import java.util.HashMap;
 
@@ -12,7 +11,11 @@ public class RowWinningStrategy implements WinningStrategy{
     private HashMap<String, Integer> rowCount[];
 
     public RowWinningStrategy(int size) {
+        this.size = size;
         rowCount = new HashMap[size];
+        for(int i=0;i<size;i++){
+            rowCount[i] = new HashMap<>();
+        }
     }
 
     @Override
