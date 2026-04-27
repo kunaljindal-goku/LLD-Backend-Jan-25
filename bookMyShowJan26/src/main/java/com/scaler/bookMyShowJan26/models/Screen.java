@@ -1,8 +1,6 @@
 package com.scaler.bookMyShowJan26.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,4 +18,7 @@ public class Screen extends BaseModel{
 
     @OneToMany
     private List<Seat> seats;
+
+    @Enumerated(EnumType.STRING)
+    private List<Feature> features;
 }
