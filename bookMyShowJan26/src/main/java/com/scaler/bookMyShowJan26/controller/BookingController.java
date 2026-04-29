@@ -20,11 +20,14 @@ public class BookingController {
     public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
-
+    
     public BookingResponseDto bookTicket(BookingRequestDto request) {
         BookingResponseDto response = new BookingResponseDto();
         try {
-            Booking booking = bookingService.bookTicket(request);
+            Booking booking = bookingService.bookTicket(
+                    request.getShowId(),
+                    request.getShowSeatIds(),
+                    request.getUserId());
             response.setBookingId(booking.getId());
             response.setAmount(booking.getAmount());
             response.setResponseStatus(ResponseStatus.SUCCESS);
