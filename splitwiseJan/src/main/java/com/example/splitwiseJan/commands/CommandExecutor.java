@@ -1,6 +1,7 @@
 package com.example.splitwiseJan.commands;
 
 import io.micrometer.observation.Observation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -11,11 +12,11 @@ import java.util.Scanner;
 import java.util.Set;
 
 @Component
-@Scope("prototype")
 public class CommandExecutor {
 
     private List<Command> commands;
 
+    @Autowired
     public CommandExecutor(SettleUp settleUp,
                            RegisterUser registerUser) {
         this.commands = new ArrayList<>();
